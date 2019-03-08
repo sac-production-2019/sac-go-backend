@@ -46,3 +46,8 @@ func Login(c echo.Context) error{
 	}
 	return errors.New("not found user")
 }
+
+
+func Hello(c echo.Context) error{
+	return c.JSON(utils.Success("hello world"))
+}

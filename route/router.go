@@ -23,7 +23,7 @@ func InitRouter() *echo.Echo{
 	authRequired.Use(auth.AuthCheckRole)
 	
 		authRequired.GET("/user/:id",userController.GetUser)	
-	
+		authRequired.POST("/hello",userController.Hello)
 	
 		
 

@@ -1,2 +1,2 @@
-p, admin, /*, *
+p, admin, /apis/*, GET
 p, member, /hello, *

@@ -47,8 +47,9 @@ func AuthCheckRole(next echo.HandlerFunc) echo.HandlerFunc{
 			fmt.Println("code comes here")
 			return next(c) 
 		} else{
-			c.JSON(utils.UnAuth("您没有此权限"))
-			return nil
+			fmt.Println("policy doesn't allow this user to access this method")
+			
+			return c.JSON(utils.UnAuth("您没有此权限")) //nil
 		}
 	}
 }
